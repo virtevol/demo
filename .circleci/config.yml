@@ -6,7 +6,6 @@ jobs:
     machine:
       enabled: true
     steps:
-    steps:
       - add_ssh_keys:
           fingerprints:
             - "09:38:a2:16:90:75:63:83:4a:fe:79:41:28:c9:2f:3a"
