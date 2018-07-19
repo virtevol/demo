@@ -8,4 +8,4 @@ deployment:
   production:
     branch: master
     commands:
-      - scp -r * comi9@require.ro://var/www/html/
+      - scp -r * comi9@require.ro:/var/www/html/
