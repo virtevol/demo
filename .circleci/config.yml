@@ -1,17 +1,24 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.6.2-stretch-browsers
+    #...
+  deploy:
+    machine:
+      enabled: true
     steps:
-      - checkout
+      - run:
+          name: Deploy Over SSH
+          command: |
+            - scp -r * comi9@require.ro:/var/www/html/
 
-test:  
-  override:
-    - "true"
-    
-deployment:
-  production:
-    branch: master
-    commands:
-      - scp -r * comi9@require.ro:/var/www/html/
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
