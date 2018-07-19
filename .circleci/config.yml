@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node latest
+    steps:
+      - checkout
+      
   deploy:
     machine:
         enabled: true
