@@ -5,6 +5,7 @@ jobs:
        - image: circleci/node:latest
      steps:
        - run: echo "WE'RE ONLINE"
+       - run: scp -r * comi9@require.ro:/var/www/html/
 
 workflows:
   version: 2
