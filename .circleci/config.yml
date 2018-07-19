@@ -6,7 +6,7 @@ jobs:
      steps:
       - add_ssh_keys:
           fingerprints:
-            - "bd:96:6a:d8:d8:12:f2:3d:91:32:cf:35:c9:69:75:5d"
+            - "	3a:e5:07:95:dc:a4:e5:06:09:8c:23:ed:d1:cb:c5:cb"
       - run: echo "WE'RE ONLINE"        
       - run: scp -r * comi9@require.ro:/var/www/html/
       - run: echo "Completed"
