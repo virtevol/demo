@@ -6,6 +6,10 @@ jobs:
     machine:
       enabled: true
     steps:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "6e:0e:61:15:23:b0:54:b7:e3:d8:7e:15:97:88:df:59"
       - run:
           name: Deploy Over SSH
           command: |
