@@ -8,7 +8,7 @@ jobs:
           fingerprints:
             - "	3a:e5:07:95:dc:a4:e5:06:09:8c:23:ed:d1:cb:c5:cb"
       - run: echo "WE'RE ONLINE"        
-      - run: scp -r * comi9@require.ro:/var/www/html/
+      - run: scp -r -o StrictHostKeyChecking=no * comi9@require.ro:/var/www/html/
       - run: echo "Completed"
       
 workflows:
