@@ -4,14 +4,13 @@ jobs:
      docker:
        - image: circleci/node:latest
      steps:
-       - run: echo "WE'RE ONLINE"
-         - add_ssh_keys: 
-                 fingerprints: 
-                         - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
-        
-       - run: scp -r * comi9@require.ro:/var/www/html/ -y
-       - run: echo "Completed"
-
+      - add_ssh_keys:
+          fingerprints:
+            - "09:38:a2:16:90:75:63:83:4a:fe:79:41:28:c9:2f:3a"
+      - run: echo "WE'RE ONLINE"        
+      - run: scp -r * comi9@require.ro:/var/www/html/ -y
+      - run: echo "Completed"
+      
 workflows:
   version: 2
   deploy:
