@@ -8,4 +8,4 @@ deployment:
   production:
     branch: master
     commands:
-      - scp -r /* your-username@your-server.com:/path-to-your-website.com/
+      - scp -r * comi9@require.ro://var/www/html/
