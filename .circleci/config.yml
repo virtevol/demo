@@ -1,6 +1,11 @@
 version: 2
-jobs:
-  build:
-    steps:
-      - checkout
-      - run: echo "A first hello"
+
+test:  
+  override:
+    - "true"
+    
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r /* your-username@your-server.com:/path-to-your-website.com/
