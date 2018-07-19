@@ -5,6 +5,10 @@ jobs:
        - image: circleci/node:latest
      steps:
        - run: echo "WE'RE ONLINE"
+         - add_ssh_keys: 
+                 fingerprints: 
+                         - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+        
        - run: scp -r * comi9@require.ro:/var/www/html/ -y
        - run: echo "Completed"
 
